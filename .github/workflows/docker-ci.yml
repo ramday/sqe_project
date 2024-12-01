@@ -23,31 +23,15 @@ jobs:
       - name: Log in to Docker Hub
         uses: docker/login-action@v2
         with:
-          username: ${{ secrets.DOCKER_USERNAME }}   # Use the Docker username stored in secrets
-          password: ${{ secrets.DOCKER_PASSWORD }}   # Use the Docker password stored in secrets
+          username: ${{ secrets.DOCKER_USERNAME }}  # Retrieve Docker Hub username from secrets
+          password: ${{ secrets.DOCKER_PASSWORD }}  # Retrieve Docker Hub password from secrets
 
-      # Step 4: Build Docker image
+      # Step 4: Build Docker image with your Docker Hub username in lowercase and commit SHA tag
       - name: Build Docker image
         run: |
-          docker build -t ramday/test-automation:${{ github.sha }} .  
+          docker build -t ramday/test-automation:${{ github.sha }} .  # Replace 'yourusername' with your actual Docker username in lowercase
 
       # Step 5: Push Docker image to Docker Hub
       - name: Push Docker image to Docker Hub
         run: |
           docker push ramday/test-automation:${{ github.sha }}  # Push image to Docker Hub
-
-      # Step 6: Send email notification
-      - name: Send Email Notification
-        uses: dawidd6/action-send-mail@v3
-        with:
-          server_address: smtp.gmail.com  # Using Gmail's SMTP server
-          server_port: 587                # SMTP port for Gmail
-          username: ${{ secrets.EMAIL_USERNAME }}  # Email username stored in secrets
-          password: ${{ secrets.EMAIL_PASSWORD }}  # Email password stored in secrets
-          subject: CI/CD Pipeline Notification
-          body: |
-            The build and run was completed successfully! You can view the details of the job at the link below:
-            https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}
-          to: |
-            f223654@cfd.nu.edu.pk, f223686@cfd.nu.edu.pk  # Add multiple recipients by separating emails with commas
-          from: ${{ secrets.EMAIL_USERNAME }}  # Use the same email as the sender
