@@ -3,19 +3,29 @@ This project demonstrates a containerized approach to test automation integrated
 
 ### Features
 Dockerization: Encapsulates test automation tools and dependencies in a Docker container for consistent and portable execution.
+
 CI/CD Pipeline: Automated builds, tests, and deployments triggered on GitHub events.
+
 GitHub Actions: Implements a robust workflow for building, testing, and pushing Docker images to Docker Hub.
+
 Scalability: Supports seamless testing across various environments using Docker.
+
 Customization: Configurable test triggers and extensible to additional tools and platforms.
+
 Monitoring: Integration with Slack/Email for build notifications (optional).
-Prerequisites
+
+### Prerequisites
 Docker: Install Docker on your local machine to build and run containers.
+
 Install Docker
 GitHub Repository: Set up a GitHub repository with Actions enabled.
+
 Secrets Configuration: Configure your Docker Hub credentials in GitHub Secrets:
+
 DOCKER_USERNAME: Your Docker Hub username (must be lowercase).
 DOCKER_PASSWORD: Your Docker Hub password or token.
-How to Use
+
+### How to Use
 # 1. Clone the Repository
    git clone https://github.com/yourusername/yourrepository.git
    cd yourrepository
