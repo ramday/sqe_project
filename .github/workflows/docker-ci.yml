@@ -25,8 +25,8 @@ jobs:
 
       - name: Build Docker image
         run: |
-          docker build -t YOUR_DOCKER_USERNAME/test-automation:${{ github.sha }} .  # Replace YOUR_DOCKER_USERNAME with your username and tag the image with commit SHA
+          docker build -t ramday/test-automation:${{ github.sha }} .  # Replace YOUR_DOCKER_USERNAME with your username and tag the image with commit SHA
 
       - name: Push Docker image to Docker Hub
         run: |
-          docker push YOUR_DOCKER_USERNAME/test-automation:${{ github.sha }}  # Push image to Docker Hub
+          docker push ramday/test-automation:${{ github.sha }}  # Push image to Docker Hub
