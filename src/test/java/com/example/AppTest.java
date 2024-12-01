@@ -49,4 +49,12 @@ public class AppTest {
         IllegalArgumentException thrown = assertThrows(IllegalArgumentException.class, () -> App.sqrt(-25));
         assertEquals("Cannot take the square root of a negative number", thrown.getMessage());
     }
+
+    // Ninth Test: Test for updated functionality
+    @Test
+    public void testNewFunctionality() {
+        // Example new functionality to test if the Docker container runs the updated tests
+        double result = App.add(1.5, 2.5); // Adding new values
+        assertEquals(4.0, result); // Checking if the result is as expected (4.0)
+    }
 }
