@@ -1,5 +1,5 @@
 ### Test Automation with Docker and CI/CD
-This project demonstrates a containerized approach to test automation integrated with a CI/CD pipeline using Docker and GitHub Actions.
+This project demonstrates a containerized approach to test automation integrated with a CI/CD pipeline using Docker and GitHub Actions..
 
 ### Features
 Dockerization: Encapsulates test automation tools and dependencies in a Docker container for consistent and portable execution.
