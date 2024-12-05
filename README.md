@@ -1,5 +1,5 @@
 ### Test Automation with Docker and CI/CD
-This project demonstrates a containerized approach to test automation integrated with a CI/CD pipeline using Docker and GitHub Actions.
+This project demonstrates a containerized approach to test automation integrated with a CI/CD pipeline using Docker and GitHub Actions..
 
 ### Features
 Dockerization: Encapsulates test automation tools and dependencies in a Docker container for consistent and portable execution.
@@ -27,8 +27,8 @@ DOCKER_PASSWORD: Your Docker Hub password or token.
 
 ### How to Use
 # 1. Clone the Repository
-   git clone https://github.com/yourusername/yourrepository.git
-   cd yourrepository
+   git clone https://github.com/ramday/sqe_project.git
+   
 
 # 2. Configure Docker Hub Credentials
 In your GitHub repository, go to Settings > Secrets and variables > Actions and add the following secrets:
