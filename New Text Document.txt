@@ -1,0 +1,8 @@
+services:
+  app:
+    image: ramday/test-automation:latest
+    ports:
+      - "8080:8080" # Map container port to host port
+    environment:
+      - ENV=production # Example environment variable
+    restart: always # Ensure the container restarts on failures
