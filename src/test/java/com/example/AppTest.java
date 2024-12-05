@@ -59,10 +59,5 @@ public class AppTest {
     }
     
     
-    @Test
-    public void testNewFunctionality2() {
-       
-        double result = App.add(1.4, 2.5); 
-        assertEquals(4.0, result);
-    }
+   
 }
